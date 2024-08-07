@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Add this class to hide the nav-links */
+.hidden {
+    display: none;
+}
+
+
+/* Media Queries for Phone View */
+@media (max-width: 450px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links button {
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links button {
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.nav-links button:hover {
+    background-color: green;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+button {
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#postsContainer,
+#favoritePostsContainer {
+    margin: 1em;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em 0;
+    position: relative;
+}
+
+.post-options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.post-options button {
+    margin-left: 0.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.post-options button:hover {
+    background-color: lightgray;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.dropdown button {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.post-options .three-dots:hover+.dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+/* Media Queries for Phone View */
+@media (max-width: 450px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links button {
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
